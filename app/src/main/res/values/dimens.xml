@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textViewPaddingLeft">8dp</dimen>
+    <dimen name="textViewPaddingBottom">4dp</dimen>
+    <dimen name="RVCardViewItemMargin">8dp</dimen>
+    <dimen name="RVImageWidth">150dp</dimen>
+    <dimen name="RVImageTextSpace">10dp</dimen>
+    <dimen name="RVBrandTextSize">18sp</dimen>
+    <dimen name="zeroVal">0dp</dimen>
+</resources>

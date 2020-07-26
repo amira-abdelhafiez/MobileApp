@@ -42,15 +42,19 @@ public class CarsPresenter implements IPresenter , IModel.OnFinishedListener {
 
     @Override
     public void onFinished(List<Car> CarArrayList) {
-        carsListView.setDataToRecyclerView(CarArrayList);
-        if (carsListView != null) {
+        if(CarArrayList == null || CarArrayList.size() == 0){
             carsListView.hideProgress();
+        }else{
+            carsListView.setDataToRecyclerView(CarArrayList);
+            if (carsListView != null) {
+                carsListView.hideProgress();
+            }
         }
+
     }
 
     @Override
     public void onFailure(Throwable t) {
-
         carsListView.onResponseFailure(t);
         if (carsListView != null) {
             carsListView.hideProgress();

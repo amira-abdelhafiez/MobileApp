@@ -76,7 +76,8 @@ public class MainActivity extends AppCompatActivity implements IView{
         dataList.addAll(CarArrayList);
         adapter.notifyDataSetChanged();
 
-        page++;
+        // No need to increase page here
+        //page++;
     }
 
     @Override

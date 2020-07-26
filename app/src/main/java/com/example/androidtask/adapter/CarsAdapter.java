@@ -1,6 +1,7 @@
 package com.example.androidtask.adapter;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +37,11 @@ public class CarsAdapter extends RecyclerView.Adapter<CarsAdapter.ItemViewHolder
         holder.brandTextView.setText(data.get(position).getBrand());
         holder.YearTextView.setText(data.get(position).getYear());
         holder.IsUsedTextView.setText(data.get(position).isUsed());
-        Picasso.get().load(data.get(position).getImageUrl()).into(holder.imgView);
+        String imageUrl = data.get(position).getImageUrl() != null ? data.get(position).getImageUrl().replace("http", "https") : null;
+        Picasso.get().load(imageUrl)
+                .placeholder(R.drawable.ic_image_placeholder)
+                .error(R.drawable.ic_image_placeholder)
+                .into(holder.imgView);
     }
 
     @Override

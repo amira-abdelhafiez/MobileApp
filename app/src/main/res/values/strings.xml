@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Cars App</string>
-    <string name="ErrorMsg">Error Occured , Please Checl Connection!</string>
+    <string name="ErrorMsg">Error Occured , Please Check Connection!</string>
 </resources>
